@@ -1,0 +1,11 @@
+project: savantenvs/flipper-tesla-fsd
+target: esp32-can-rx
+
+cmds:
+  - cmd: /mayhem/mayhem/out/esp32_can_rx
+    libfuzzer: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/esp32-can-rx/testsuite

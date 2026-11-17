@@ -1,0 +1,11 @@
+project: savantenvs/flipper-tesla-fsd
+target: stream-filter
+
+cmds:
+  - cmd: /mayhem/mayhem/out/stream_filter
+    libfuzzer: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/stream-filter/testsuite
